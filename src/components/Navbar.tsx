@@ -34,8 +34,8 @@ export default function Navbar() {
                         <Image
                             src="/logo.png"
                             alt="Cime Consultores"
-                            width={280}
-                            height={280}
+                            width={200}
+                            height={200}
                         />
                     </Link>
 
