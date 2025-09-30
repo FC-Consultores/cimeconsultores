@@ -28,14 +28,14 @@ export default function Navbar() {
         <>
             {/* Header fijo */}
             <header className="fixed top-0 left-0 right-0 z-40 border-b border-white/5 bg-[--color-brand-black]/40 backdrop-blur-md">
-                <div className="container flex items-center justify-between h-16">
+                <div className="container flex items-center justify-between h-20">
                     {/* Logo */}
                     <Link href="#inicio" className="flex items-center gap-2">
                         <Image
                             src="/logo.png"
                             alt="Cime Consultores"
-                            width={200}
-                            height={200}
+                            width={280}
+                            height={280}
                         />
                     </Link>
 
