@@ -32,7 +32,7 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link href="#inicio" className="flex items-center gap-2">
                         <Image
-                            src="/logo.svg"
+                            src="/logo.png"
                             alt="Cime Consultores"
                             width={200}
                             height={200}
