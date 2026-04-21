@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Send, MapPin, Mail, Phone, MessageCircle } from "lucide-react";
 
@@ -23,11 +23,11 @@ export default function Contact() {
     message: ""
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSend = (e) => {
+  const handleSend = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formData.name || !formData.message) return alert("Por favor completa tu nombre y mensaje.");
 
