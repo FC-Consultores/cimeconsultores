@@ -57,16 +57,16 @@ export default function Navbar() {
             <Image
               src="/logo-horiz.png"
               alt="Cime Consultores"
-              width={140}
-              height={40}
-              className="hidden md:block object-contain brightness-0 invert"
+              width={180}
+              height={80}
+              className="hidden md:block object-contain"
             />
             <Image
               src="/logo-icon.png"
               alt="Cime Consultores"
-              width={40}
-              height={40}
-              className="md:hidden object-contain brightness-0 invert"
+              width={80}
+              height={80}
+              className="md:hidden object-contain"
             />
           </Link>
 

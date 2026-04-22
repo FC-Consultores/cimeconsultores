@@ -8,7 +8,7 @@ export default function Footer() {
 
         {/* Marca */}
         <div className="md:col-span-1 space-y-4">
-          <Image src="/logo-horiz.png" alt="Cime Consultores" width={140} height={35} className="brightness-0 invert opacity-80" />
+          <Image src="/logo-horiz.png" alt="Cime Consultores" width={180} height={55} className="opacity-80" />
           <p className="text-sm leading-relaxed max-w-xs">
             Soluciones fiscales y contables para negocios que quieren crecer con seguridad y cumplimiento.
           </p>

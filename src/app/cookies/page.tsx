@@ -55,7 +55,7 @@ export default function CookiesPage() {
           <p>Podemos actualizar esta política de cookies periódicamente. Le recomendamos revisarla regularmente.</p>
 
           <h2 className="text-2xl font-bold text-brand-dark mt-8 mb-4">7. Contacto</h2>
-          <p>Si tiene preguntas sobre nuestra política de cookies, contáctenos en: <a href="mailto:contacto@cimeconsultores.com" className="text-brand-green underline">contacto@cimeconsultores.com</a></p>
+          <p>Si tiene preguntas sobre nuestra política de cookies, contáctenos en: <a href="mailto:facundocime@hotmail.com" className="text-brand-green underline">facundocime@hotmail.com</a></p>
 
           <p className="text-sm text-brand-dark/50 mt-12">
             Última actualización: {new Date().toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}
