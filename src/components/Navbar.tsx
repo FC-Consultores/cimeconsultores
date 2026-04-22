@@ -14,6 +14,8 @@ const navLinks = [
   { name: "Servicios", href: "#servicios" },
   { name: "¿Por qué elegirnos?", href: "#por-que-elegirnos" },
   { name: "Contacto", href: "#contacto" },
+  { name: "Privacidad", href: "/privacidad" },
+  { name: "Términos", href: "/terminos" },
 ];
 
 export default function Navbar() {

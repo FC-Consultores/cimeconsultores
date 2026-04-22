@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#111111] text-white/40 py-16 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
-        
+
         {/* Marca */}
         <div className="md:col-span-1 space-y-4">
           <Image src="/logo-horiz.png" alt="Cime Consultores" width={140} height={35} className="brightness-0 invert opacity-80" />
@@ -29,9 +29,21 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-4">Legal</h4>
           <ul className="space-y-2 text-sm">
-            <li><Link href="#" className="hover:text-brand-green transition-colors">Aviso de Privacidad</Link></li>
-            <li><Link href="#" className="hover:text-brand-green transition-colors">Términos y Condiciones</Link></li>
-            <li><Link href="#" className="hover:text-brand-green transition-colors">Política de Cookies</Link></li>
+            <li>
+              <Link href="/privacidad" className="hover:text-brand-green transition-colors">
+                Aviso de Privacidad
+              </Link>
+            </li>
+            <li>
+              <Link href="/terminos" className="hover:text-brand-green transition-colors">
+                Términos y Condiciones
+              </Link>
+            </li>
+            <li>
+              <Link href="/cookies" className="hover:text-brand-green transition-colors">
+                Política de Cookies
+              </Link>
+            </li>
           </ul>
         </div>
 
