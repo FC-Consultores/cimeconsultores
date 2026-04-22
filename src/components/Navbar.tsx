@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
 import { FaFacebook, FaTiktok, FaWhatsapp } from "react-icons/fa";
@@ -14,48 +15,58 @@ const navLinks = [
   { name: "Servicios", href: "#servicios" },
   { name: "¿Por qué elegirnos?", href: "#por-que-elegirnos" },
   { name: "Contacto", href: "#contacto" },
-  { name: "Privacidad", href: "/privacidad" },
-  { name: "Términos", href: "/terminos" },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  // Estado para el menú lateral
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  // Estado para el fondo del navbar (sólido vs transparente)
+  const [isSolid, setIsSolid] = useState(!isHome);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    // Solo escuchamos el scroll si estamos en la página principal
+    if (!isHome) return;
+
+    const handleScroll = () => setIsSolid(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHome]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <>
-      {/* NAVBAR FIJO */}
+      {/* NAVBAR CONTEXTUAL */}
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-brand-dark/90 backdrop-blur-md border-b border-white/10 shadow-lg py-4"
-            : "bg-transparent py-6"
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+          isSolid
+            ? "bg-brand-dark/95 backdrop-blur-md border-b border-white/10 shadow-lg py-3"
+            : "bg-transparent py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo Responsive */}
-          <Link href="#hero" onClick={() => setIsOpen(false)} className="block relative z-50">
+          <Link
+            href={isHome ? "#hero" : "/"}
+            onClick={() => setIsOpen(false)}
+            className="block relative z-50"
+          >
             <Image
               src="/logo-horiz.png"
               alt="Cime Consultores"
-              width={160}
+              width={140}
               height={40}
-              className="hidden md:block object-contain"
+              className="hidden md:block object-contain brightness-0 invert"
             />
             <Image
               src="/logo-icon.png"
               alt="Cime Consultores"
-              width={80}
-              height={80}
-              className="md:hidden object-contain"
+              width={40}
+              height={40}
+              className="md:hidden object-contain brightness-0 invert"
             />
           </Link>
 
@@ -107,6 +118,13 @@ export default function Navbar() {
                     {link.name}
                   </Link>
                 ))}
+                {/* Enlaces legales opcionales en el menú */}
+                <Link href="/privacidad" onClick={toggleMenu} className="text-white/50 text-sm hover:text-brand-green mt-4 transition-colors">
+                  Aviso de Privacidad
+                </Link>
+                <Link href="/terminos" onClick={toggleMenu} className="text-white/50 text-sm hover:text-brand-green transition-colors">
+                  Términos y Condiciones
+                </Link>
               </nav>
 
               {/* Redes y Ubicación */}
