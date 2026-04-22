@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar"; // 👈 Importa el navbar
+import CookieConsent from "@/components/CookieConsent";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -29,10 +30,11 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body className={`${poppins.variable} font-sans bg-brand-white text-brand-dark antialiased`}>
-        <Navbar /> {/* 👈 Navbar fijo en todas las páginas */}
+        <Navbar />
         <main>
           {children}
         </main>
+        <CookieConsent /> {/* ← Agrega esto antes de cerrar body */}
       </body>
     </html>
   );

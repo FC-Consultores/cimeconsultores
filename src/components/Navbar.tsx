@@ -110,16 +110,16 @@ export default function Navbar() {
               {/* Redes y Ubicación */}
               <div className="mt-auto space-y-6 pt-6 border-t border-white/10">
                 <div className="flex gap-4">
-                  <a href="mailto:facundocime@hotmail.com" className="text-white/70 hover:text-brand-green transition-colors p-2 bg-white/5 rounded-full">
+                  <a href="mailto:facundocime@hotmail.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-brand-green transition-colors p-2 bg-white/5 rounded-full">
                     <FiMail size={20} />
                   </a>
-                  <a href="https://wa.me/529992010912" className="text-white/70 hover:text-brand-green transition-colors p-2 bg-white/5 rounded-full">
+                  <a href="https://wa.me/529992010912" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-brand-green transition-colors p-2 bg-white/5 rounded-full">
                     <FaWhatsapp size={20} />
                   </a>
-                  <a href="https://www.facebook.com/facundo.cime" className="text-white/70 hover:text-brand-green transition-colors p-2 bg-white/5 rounded-full">
+                  <a href="https://www.facebook.com/facundo.cime" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-brand-green transition-colors p-2 bg-white/5 rounded-full">
                     <FaFacebook size={20} />
                   </a>
-                  <a href="https://www.tiktok.com/@faccime" className="text-white/70 hover:text-brand-green transition-colors p-2 bg-white/5 rounded-full">
+                  <a href="https://www.tiktok.com/@faccime" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-brand-green transition-colors p-2 bg-white/5 rounded-full">
                     <FaTiktok size={20} />
                   </a>
                 </div>

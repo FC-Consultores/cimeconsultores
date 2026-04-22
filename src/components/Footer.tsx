@@ -39,7 +39,7 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-4">Contacto</h4>
           <p className="text-sm mb-2">Mérida, Yucatán, México</p>
-          <p className="text-sm">contacto@cimeconsultores.com</p>
+          <p className="text-sm">facundocime@hotmail.com</p>
           <p className="text-sm mt-1">+52 999 201 0912</p>
         </div>
       </div>

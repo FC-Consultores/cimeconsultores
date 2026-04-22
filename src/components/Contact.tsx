@@ -83,7 +83,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm text-white/40">Correo electrónico</p>
-                <p className="font-semibold text-lg">contacto@cimeconsultores.com</p>
+                <p className="font-semibold text-lg">facundocime@hotmail.com</p>
               </div>
             </div>
           </div>
